@@ -7,3 +7,7 @@
 Using:
 - Bootstrap
 - Php 7.x
+
+
+Improvements:
+- Using nodejs: https://www.w3schools.com/nodejs/nodejs_raspberrypi_blinking_led.asp
