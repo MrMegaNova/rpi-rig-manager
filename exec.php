@@ -1,4 +1,13 @@
 <?php 
+
+if (isset($_POST['r1']))
+{
+exec('$(uptime) > log.txt');
+}
+
+
+/*
+
 if (isset($_POST['RedON']))
 {
 exec('sudo python /var/www/gpio/red_on.py');
@@ -23,3 +32,5 @@ if (isset($_POST['GreenOFF']))
 {
 exec('sudo python /var/www/gpio/green_off.py');
 }
+
+*/

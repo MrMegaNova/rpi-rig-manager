@@ -6,3 +6,7 @@ function proceed () {
     document.body.appendChild(form)
     form.submit();
 }
+
+
+
+// html onclick="proceed()";

@@ -14,9 +14,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
-
-    <!-- Send commands -->
-    <script src="proceed.js"></script>
   </head>
 
   <body>
@@ -48,8 +45,10 @@
               <li>Uptime</li>
               <li>Last boot</li>
             </ul>
-            <button type="button" class="btn btn-sm btn-block btn-outline-primary onclick="proceed()";>Start/Stop</button>
+            <form method="post">
+            <button type="button" name="r1" value="submit" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
             <button type="button" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+          </form>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
