@@ -46,8 +46,8 @@
               <li>Last boot</li>
             </ul>
             <form method="post">
-            <button type="button" name="r1" value="submit" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
-            <button type="button" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+            <button type="submit" name="Rig00" value="start-stop" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
+            <button type="submit" name="Rig00" value="force-stop" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
           </form>
           </div>
         </div>
