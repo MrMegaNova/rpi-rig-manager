@@ -1,17 +1,36 @@
-Rig02
-Rig02
-rig01
-Rig00
-Rig00
-Rig00
-Rig00
-rig01
-rig01
-Rig02
-Rig02
-Rig02
-Rig02
-Rig02
-Rig00
-rig01
-Rig02
+Set gpio number as argument!
+Set gpio number as argument!
+Set gpio number as argument!
+Set arguments!
+rig:  | Do: 
+=======END======
+Set arguments!
+rig:  | Do: 
+=======END======
+Set arguments!
+rig:  | Do: 
+=======END======
+Set arguments!
+rig:  | Do: 
+=======END======
+Set arguments!
+rig:  | Do: 
+=======END======
+Set arguments!
+rig:  | Do: 
+=======END======
+Set arguments!
+rig:  | Do: 
+=======END======
+Set arguments!
+rig: rig00 start-stop | Do: 
+=======END======
+Set arguments!
+rig: rig00 start-stop | Do: 
+=======END======
+Set arguments!
+rig: rig00 start-stop | Do: 
+=======END======
+Set arguments!
+rig: rig00 start-stop | Do: 
+=======END======

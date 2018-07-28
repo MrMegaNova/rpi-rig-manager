@@ -1,3 +1,10 @@
+<?php
+ if (isset($_POST['Rig']))
+{
+  $rig = $_POST['Rig'];
+  shell_exec("./gpio-bash-control.sh '".$rig."'");
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -46,8 +53,8 @@
               <li>Last boot</li>
             </ul>
             <form method="post">
-            <button type="submit" name="Rig00" value="start-stop" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
-            <button type="submit" name="Rig00" value="force-stop" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+            <button type="submit" name="Rig" value="rig00 start-stop" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
+            <button type="submit" name="Rig" value="rig00 force-stop" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
           </form>
           </div>
         </div>
@@ -62,8 +69,10 @@
               <li>Uptime</li>
               <li>Last boot</li>
             </ul>
-            <button type="button" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
-            <button type="button" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+             <form method="post">
+            <button type="submit" name="Rig" value="rig01 start-stop" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
+            <button type="submit" name="Rig" value="rig01 force-stop" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+          </form>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -77,8 +86,10 @@
               <li>Uptime</li>
               <li>Last boot</li>
             </ul>
-            <button type="button" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
-            <button type="button" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+             <form method="post">
+            <button type="submit" name="Rig" value="rig02 start-stop" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
+            <button type="submit" name="Rig" value="rig02 force-stop" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+          </form>
           </div>
         </div>
       </div>

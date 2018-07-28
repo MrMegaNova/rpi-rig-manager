@@ -1,9 +1,10 @@
 #!/bin/bash
 if [ ! -z "$1" ] && [ ! -z "$2" ];
 then
-	gpio=$1
+	rig=$1
 	do=$2
-	echo $gpio
+	echo $do $rig >> log.txt
+	gpio=$(grep $rig database.txt | cut -d ":" -f2)
 
 	#Exports pin to userspace
 	echo $gpio > /sys/class/gpio/export
@@ -23,14 +24,14 @@ then
 
 	#Waiting x ms
 	case "$do" in
-		"start" | "stop")
+		"start-stop")
 			time=1
 			;;
 		"force")
 			time=5
 			;;
 		*)
-			echo "Error in 2nd arg <do>"
+			echo "Error in 2nd arg <do>" >> log.txt
 			;;
 	esac
 
@@ -42,5 +43,9 @@ then
 	# Sets pin to low
 	echo "0" > "/sys/class/gpio/gpio"$gpio"/value"
 else
-	echo "Set gpio number as argument!"
+	rig=$1
+	do=$2
+	echo "Set arguments!" >> log.txt
+	echo "rig: $rig | Do: $do" >> log.txt
 fi
+echo "=======END======" >> log.txt
