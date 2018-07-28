@@ -1,12 +1,17 @@
 #!/bin/bash
+log=log.txt
+echo "========Script======" >> $log
+echo "$(date)	  " >> $log
+echo "====================" >> $log
 if [ ! -z "$1" ] && [ ! -z "$2" ];
 then
 	rig=$1
 	do=$2
-	echo $do $rig >> log.txt
+	echo $do $rig >> $log
 	gpio=$(grep $rig database.txt | cut -d ":" -f2)
 
 	#Exports pin to userspace
+	echo Gpio: $gpio >> $log
 	echo $gpio > /sys/class/gpio/export
 	sleep 1
 
@@ -31,7 +36,7 @@ then
 			time=5
 			;;
 		*)
-			echo "Error in 2nd arg <do>" >> log.txt
+			echo "Error in 2nd arg <do>" >> $log
 			;;
 	esac
 
@@ -45,7 +50,7 @@ then
 else
 	rig=$1
 	do=$2
-	echo "Set arguments!" >> log.txt
-	echo "rig: $rig | Do: $do" >> log.txt
+	echo "Set arguments!" >> $log
+	echo "rig: $rig | Do: $do" >> $log
 fi
-echo "=======END======" >> log.txt
+echo "=======END======" >> $log
