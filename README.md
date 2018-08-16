@@ -2,6 +2,7 @@
 
 - Manage rigs with a cool web UI on raspberry Pi using relay to poweron/poweroff
 - Realtime monitoring (ping, uptime, mining speed)
+- Add 020_www-data-nopasswd to /etc/sudoers.d/
 
 
 Using:

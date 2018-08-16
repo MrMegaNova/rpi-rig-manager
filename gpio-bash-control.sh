@@ -15,7 +15,7 @@ then
 	echo $gpio > /sys/class/gpio/export
 	sleep 1
 
-	cat '/sys/class/gpio/export'
+	#cat '/sys/class/gpio/export'
 	sleep 1
 
 	# Sets pin as an output

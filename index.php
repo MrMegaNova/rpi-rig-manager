@@ -1,8 +1,9 @@
 <?php
  if (isset($_POST['Rig']))
-{
-  $rig = $_POST['Rig'];
-  shell_exec("./gpio-bash-control.sh '".$rig."'");
+{	
+	$rig = $_POST['Rig'];
+	$args = explode(" ", $rig);
+	shell_exec("sudo ./gpio-bash-control.sh '".$args[0]."' '".$args[1]."'");
 }
 ?>
 <!doctype html>
@@ -54,7 +55,7 @@
             </ul>
             <form method="post">
             <button type="submit" name="Rig" value="rig00 start-stop" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
-            <button type="submit" name="Rig" value="rig00 force-stop" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+            <button type="submit" name="Rig" value="rig00 force" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
           </form>
           </div>
         </div>
@@ -71,7 +72,7 @@
             </ul>
              <form method="post">
             <button type="submit" name="Rig" value="rig01 start-stop" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
-            <button type="submit" name="Rig" value="rig01 force-stop" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+            <button type="submit" name="Rig" value="rig01 force" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
           </form>
           </div>
         </div>
@@ -88,7 +89,7 @@
             </ul>
              <form method="post">
             <button type="submit" name="Rig" value="rig02 start-stop" class="btn btn-sm btn-block btn-outline-primary">Start/Stop</button>
-            <button type="submit" name="Rig" value="rig02 force-stop" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
+            <button type="submit" name="Rig" value="rig02 force" class="btn btn-sm btn-block btn-outline-primary">Force stop</button>
           </form>
           </div>
         </div>
